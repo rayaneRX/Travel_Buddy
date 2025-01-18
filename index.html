@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Travel Buddy - Trouvez votre guide touristique idéal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>Travel Buddy</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+          <li><a href="inscription.html"><i class="fas fa-user-plus"></i> Inscription</a></li>
+          <li><a href="connexion.html"><i class="fas fa-sign-in-alt"></i> Connexion</a></li>
+          <li><a href="ajouter-profil.html"><i class="fas fa-user-plus"></i> Devenir Guide</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Trouvez le guide touristique parfait pour votre prochaine aventure</h2>
+      <p>Travel Buddy vous met en relation avec des guides locaux expérimentés qui vous feront découvrir les trésors cachés de votre destination.</p>
+      <a href="helpers.html" class="button">Trouvez votre guide</a>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <h2>Pourquoi choisir Travel Buddy ?</h2>
+      <div class="feature">
+        <i class="fas fa-map-marked-alt"></i> <span class="icon-label">Découvrez des lieux uniques</span>
+        <p>Explorez des endroits insolites et authentiques grâce aux conseils de guides locaux passionnés.</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-chalkboard-teacher"></i> <span class="icon-label">Apprenez et partagez</span>
+        <p>Enrichissez vos connaissances sur la culture et l'histoire de votre destination grâce à des guides expérimentés.</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-globe-americas"></i> <span class="icon-label">Voyagez en toute sérénité</span>
+        <p>Profitez pleinement de votre voyage en confiant l'organisation et la logistique à un guide professionnel.</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-user-clock"></i> <span class="icon-label">Gagnez du temps</span>
+        <p>Optimisez votre temps de voyage en laissant un guide organiser vos visites et vos activités.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="container">
+      <h2>Témoignages</h2>
+      <div class="testimonial">
+        <p>"Grâce à Travel Buddy, j'ai trouvé un compagnon de voyage génial pour mon trek au Népal !"</p>
+        <p>- Sophie</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Travel Buddy</p>
+    </div>
+  </footer>
+
+  <script>
+    // Fonction pour vérifier si l'utilisateur est connecté (en utilisant les informations de session)
+    function isAuthenticated() {
+      // Vérifie si une session utilisateur existe
+      return Boolean(document.cookie.includes('connect.sid'));
+    }
+
+    const loginLink = document.getElementById('login-link');
+    const logoutLink = document.getElementById('logout-link');
+
+    if (isAuthenticated()) {
+      loginLink.style.display = 'none';
+      logoutLink.style.display = 'block';
+    } else {
+      loginLink.style.display = 'block';
+      logoutLink.style.display = 'none';
+    }
+  </script>
+</body>
+</html>

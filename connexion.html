@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Connexion - Travel Buddy</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <section class="connexion">
+      <div class="container">
+        <h2>Connexion</h2>
+        <form action="/connexion" method="post"> 
+          <label for="email">Email :</label>
+          <input type="email" id="email" name="email" required><br><br>
+
+          <label for="motdepasse">Mot de passe :</label>
+          <input type="password" id="motdepasse" name="motdepasse" required><br><br>
+
+          <button type="submit">Se connecter</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <script>
+    const form = document.querySelector('form');
+  
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault(); // Empêche le rechargement de la page
+  
+      const formData = new FormData(form); // Crée un objet FormData avec les données du formulaire
+      const data = {};
+      formData.forEach((value, key) => (data[key] = value)); // Convertit les données du formulaire en un objet
+  
+      try {
+        const response = await fetch(form.action, { // Envoie la requête POST à l'URL spécifiée dans l'attribut "action" du formulaire
+          method: form.method, // Utilise la méthode spécifiée dans l'attribut "method" du formulaire
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data) // Envoie les données du formulaire au format JSON
+        });
+  
+        if (response.ok) {
+          // Action réussie (inscription ou connexion)
+          window.location.href = '/'; // Redirige vers la page d'accueil
+        } else {
+          // Erreur lors de l'action
+          const errorData = await response.json();
+          console.error('Erreur :', errorData);
+          // Affiche un message d'erreur à l'utilisateur
+          alert(errorData.message || 'Une erreur est survenue.');
+        }
+      } catch (error) {
+        console.error('Erreur :', error);
+        // Affiche un message d'erreur à l'utilisateur
+        alert('Une erreur est survenue.');
+      }
+    });
+  </script>
+</body>
+</html>

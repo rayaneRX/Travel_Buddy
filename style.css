@@ -1,0 +1,234 @@
+/* Général */
+body {
+  font-family: 'Roboto', sans-serif; /* Exemple de police Google Font */
+  margin: 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+header {
+  background-color: #673ab7;
+  color: #fff;
+  padding: 20px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hero */
+.hero {
+  background-image: url('images/hero-background.jpg'); /* Remplace par ton image */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.button {
+  display: inline-block;
+  background-color: #fff;
+  color: #673ab7;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+/* Features */
+.features {
+  padding: 60px 0;
+}
+
+.feature {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+}
+
+.feature i {
+  font-size: 48px;
+  color: #673ab7;
+  margin-bottom: 10px;
+}
+
+.icon-label {
+  display: block;
+  font-weight: bold;
+}
+
+/* Testimonials */
+.testimonials {
+  background-color: #f8f8f8;
+  padding: 60px 0;
+}
+
+.testimonial {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Guides (page helpers.html) */
+.guides {
+  padding: 60px 0;
+}
+
+.guides h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#liste-guides {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.guide {
+  width: 30%; 
+  margin-bottom: 30px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.guide img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.guide h3 {
+  margin-top: 0;
+}
+
+/* Inscription (page inscription.html) */
+.inscription {
+  padding: 60px 0;
+}
+
+.inscription h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.inscription form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.inscription label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.inscription input[type="text"],
+.inscription input[type="email"],
+.inscription input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box; 
+}
+
+.inscription button[type="submit"] {
+  background-color: #673ab7;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Connexion (page connexion.html) */
+.connexion {
+  padding: 60px 0;
+}
+
+.connexion h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.connexion form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.connexion label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.connexion input[type="email"],
+.connexion input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.connexion button[type="submit"] {
+  background-color: #673ab7;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+} 
