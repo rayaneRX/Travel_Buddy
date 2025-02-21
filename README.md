@@ -6,7 +6,7 @@ A travel companion application to help plan and organize your trips.
 
 1. First, remove any nested Git repositories:
 ```bash
-rm -rf Travel_Buddy/.git
+rmdir /s /q Travel_Buddy\.git
 ```
 
 2. Initialize the Git repository in the root folder:
